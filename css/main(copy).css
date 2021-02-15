@@ -1268,8 +1268,8 @@ section {
 
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   padding: 40px;
   top: 50%;
   left: 50%;
@@ -1279,6 +1279,13 @@ section {
   border-radius: 4px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal p {
@@ -1425,7 +1432,17 @@ section {
 .checkbox {
   position: relative;
   margin-bottom: 30px;
-  padding-left: 36px;
+  padding-left: 23px;
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox {
+    padding-left: 36px;
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox a {
@@ -1436,12 +1453,18 @@ section {
 .checkbox__icon {
   position: absolute;
   top: 0;
-  left: 13px;
+  left: 0;
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
   border-radius: 2px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox__icon {
+    left: 13px;
+  }
 }
 
 .checkbox__agree:checked ~ .checkbox__icon {

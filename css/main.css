@@ -772,9 +772,10 @@ header {
 }
 
 .hero {
+  height: 400px;
   background-color: #c4c4c4;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../img/reduced/img-hero.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/reduced/img-hero.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../img/reduced/hero480.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/reduced/hero480.jpg");
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 118px;
@@ -783,8 +784,18 @@ header {
 
 @media screen and (min-width: 768px) {
   .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../img/reduced/hero768.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/reduced/hero768.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../img/reduced/img-hero.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/reduced/img-hero.jpg");
   }
 }
 
@@ -1684,8 +1695,8 @@ section {
 
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   padding: 40px;
   top: 50%;
   left: 50%;
@@ -1695,6 +1706,13 @@ section {
   border-radius: 4px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal p {
@@ -1841,7 +1859,17 @@ section {
 .checkbox {
   position: relative;
   margin-bottom: 30px;
-  padding-left: 36px;
+  padding-left: 23px;
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox {
+    padding-left: 36px;
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox a {
@@ -1852,12 +1880,18 @@ section {
 .checkbox__icon {
   position: absolute;
   top: 0;
-  left: 13px;
+  left: 0;
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
   border-radius: 2px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox__icon {
+    left: 13px;
+  }
 }
 
 .checkbox__agree:checked ~ .checkbox__icon {

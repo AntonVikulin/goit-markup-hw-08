@@ -57,6 +57,7 @@
     width: 100%;
     height: 120px;
     padding: 25px 0;
+    margin-bottom: 30px;
 
     background: #f5f4fa;
     border-radius: 4px;
@@ -66,7 +67,8 @@
 .instruments-h3 {
   font-family: Roboto;
   font-weight: bold;
-  margin-top: 30px;
+  align-items: center;
+  margin: auto;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;

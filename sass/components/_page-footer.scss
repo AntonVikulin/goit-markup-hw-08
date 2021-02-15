@@ -1,0 +1,206 @@
+footer {
+  display: block;
+  text-align: center;
+  margin: auto;
+  background: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  & > .container {
+    display: block;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
+  }
+}
+
+.logo-footer {
+  color: $color-4;
+  font-family: Raleway;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.17;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+
+  &-studio {
+    color: $color-2;
+  }
+}
+
+address {
+  display: block;
+  min-width: 231px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 61px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+  }
+}
+
+.address-list {
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
+
+  & > li:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.footer-addres {
+  font-style: normal;
+  line-height: 1.71;
+  color: $color-2;
+}
+
+.footer-contacts {
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-sn {
+  display: block;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 165px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
+
+  & a {
+    color: $color-2;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.footer-title {
+  text-align: center;
+  margin: 60px auto 20px;
+  color: $color-2;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
+
+.subscribe {
+  display: block;
+
+  @media screen and (min-width: 768px) {
+    margin: auto;
+
+    & .footer-title {
+      margin-top: 60px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: 0 0 0 93px;
+
+    & .footer-title {
+      margin-top: 0;
+    }
+  }
+
+  &-form {
+    display: block;
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+
+  & button {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    background: $color-4;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+  }
+
+  & span {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: $color-2;
+  }
+
+  & label {
+    display: flex;
+    width: 450px;
+    height: 50px;
+    margin: auto;
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin: 0;
+    }
+  }
+
+  &-input {
+    width: 100%;
+    height: 100%;
+    padding-left: 16px;
+    flex-grow: 1;
+    border-radius: 4px;
+    background: #2f303a;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 10px;
+    }
+  }
+
+  &-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    fill: $color-2;
+  }
+
+  & button {
+    margin-top: 20px;
+    font-family: inherit;
+
+    @media screen and (min-width: 1200px) {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+header {
+  display: flex;
+  height: 80px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  background: $color-2;
+  border-bottom: 1px solid #ececec;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-header {
+  display: flex;
+  margin-right: 93px;
+
+  width: 145px;
+  height: 31px;
+  color: $color-1;
+  font-family: Raleway;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  &__web {
+    color: $color-4;
+  }
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-li {
+  position: relative;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.nav-item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: color $animation-duration $animation-type;
+
+  &::after {
+    content: "";
+
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $color-4;
+    opacity: 0;
+    transition: opacity $animation-duration $animation-type;
+  }
+}
+
+.link {
+  display: flex;
+  color: $color-1;
+  text-decoration: none;
+  transition: color $animation-duration $animation-type;
+}
+
+.active.nav-item::after,
+.nav-item:hover::after,
+.nav-item:focus::after {
+  opacity: 1;
+}
+
+.active.link,
+.link:hover,
+.link:focus {
+  color: $color-4;
+}
+
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts__item {
+  align-items: center;
+  fill: currentColor;
+
+  svg {
+    margin-right: 10px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.header-contacts {
+  color: $color-3;
+}

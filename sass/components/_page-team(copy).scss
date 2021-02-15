@@ -1,0 +1,78 @@
+.team .container {
+  display: block;
+}
+
+.team {
+  font-size: 16px;
+  line-height: 1.19;
+  background: #f5f4fa;
+}
+
+.professional {
+  display: flex;
+
+  & img {
+    margin-bottom: 30px;
+  }
+}
+
+.professional-list {
+  width: 270px;
+  background: $color-2;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.team-h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.team p {
+  font-weight: normal;
+  text-align: center;
+  color: $color-3;
+  margin-top: 0;
+}
+
+.social-network {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  & > li:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social-network-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: $color-5;
+  background-color: $color-2;
+  transition: background-color $animation-duration $animation-type,
+    color $animation-duration $animation-type;
+
+  &:hover,
+  &:focus {
+    background-color: $color-4;
+    color: $color-2;
+  }
+}
+
+.social-network-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}

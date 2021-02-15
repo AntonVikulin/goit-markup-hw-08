@@ -1,0 +1,67 @@
+h1 {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $color-2;
+}
+
+.hero {
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../img/reduced/img-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.heading {
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  display: block;
+  text-align: center;
+  margin: auto;
+  width: 696px;
+  height: 120px;
+}
+
+.hero__button {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  align-items: center;
+  background: $color-4;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: auto;
+  border: none;
+
+  & > span {
+    display: flex;
+    margin: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.87;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $color-2;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

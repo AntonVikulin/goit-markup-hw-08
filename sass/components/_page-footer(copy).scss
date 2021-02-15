@@ -1,0 +1,119 @@
+footer {
+  background: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  & > .container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+address {
+  display: block;
+  min-width: 231px;
+}
+
+.address-list {
+  margin-top: 20px;
+
+  & > li:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.logo-footer {
+  color: $color-4;
+  font-family: Raleway;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+
+  &-studio {
+    color: $color-2;
+  }
+}
+
+.footer-addres {
+  font-style: normal;
+  line-height: 1.71;
+  color: $color-2;
+}
+
+.footer-contacts {
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-sn {
+  display: block;
+  margin-left: 70px;
+
+  & a {
+    color: $color-2;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.footer-title {
+  margin-bottom: 20px;
+  color: $color-2;
+  text-transform: uppercase;
+}
+
+.subscribe {
+  display: block;
+  margin-left: 93px;
+  margin-bottom: 20px;
+
+  & button {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    background: $color-4;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+  }
+
+  & span {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: $color-2;
+  }
+
+  & label {
+    display: flex;
+    width: 358px;
+    height: 50px;
+  }
+
+  &-input {
+    width: 100%;
+    height: 100%;
+  }
+
+  &-form {
+    display: flex;
+  }
+
+  &-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    fill: $color-2;
+  }
+}
+
+button {
+  font-family: inherit;
+}

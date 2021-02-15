@@ -1,0 +1,164 @@
+header {
+  display: flex;
+  height: 60px;
+  background: $color-2;
+  border-bottom: 1px solid #ececec;
+
+  @media screen and (min-width: 768px) {
+    height: 80px;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-header {
+  display: flex;
+  font-family: Raleway;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: $color-1;
+
+  &__web {
+    color: $color-4;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+
+.nav {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-li {
+  position: relative;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.nav-item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: color $animation-duration $animation-type;
+
+  &::after {
+    content: "";
+
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $color-4;
+    opacity: 0;
+    transition: opacity $animation-duration $animation-type;
+  }
+}
+
+.link {
+  display: flex;
+  color: $color-1;
+  text-decoration: none;
+  transition: color $animation-duration $animation-type;
+}
+
+.active.nav-item::after,
+.nav-item:hover::after,
+.nav-item:focus::after {
+  opacity: 1;
+}
+
+.active.link,
+.link:hover,
+.link:focus {
+  color: $color-4;
+}
+
+.contacts {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.contacts__item {
+  align-items: center;
+  fill: currentColor;
+
+  @media screen and (min-width: 768px) {
+    svg {
+      margin-right: 10px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    svg {
+      margin-right: 10px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 50px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.header-contacts {
+  color: $color-3;
+}
+
+.menu {
+  margin-left: auto;
+  border: none;
+  color: $color-1;
+  transition: color $animation-duration $animation-type;
+
+  & svg {
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-4;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}

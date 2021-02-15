@@ -1,0 +1,40 @@
+.title-none {
+  visibility: hidden;
+}
+
+.instruments ul {
+  display: flex;
+}
+
+.instruments-list {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  & > svg {
+    display: block;
+    width: 100%;
+    height: 120px;
+    padding: 25px 0;
+
+    background: #f5f4fa;
+    border-radius: 4px;
+  }
+}
+
+.instruments-h3 {
+  font-family: Roboto;
+  width: 270px;
+  font-weight: bold;
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.instruments-text {
+  width: 270px;
+  line-height: 1.71;
+  color: $color-3;
+}

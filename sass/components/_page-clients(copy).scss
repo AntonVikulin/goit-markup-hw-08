@@ -1,0 +1,31 @@
+.clients .container {
+  display: block;
+}
+
+.clients-list {
+  display: flex;
+
+  & > li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.clients-link {
+  display: flex;
+  width: 170px;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  color: $color-5;
+  border: 1px solid $color-5;
+  border-radius: 4px;
+
+  fill: currentColor;
+  border-color: currentColor;
+  transition: color $animation-duration $animation-type;
+
+  &:hover,
+  &:focus {
+    color: $color-4;
+  }
+}

@@ -1,5 +1,6 @@
 header {
   display: flex;
+  position: relative;
   height: 60px;
   background: $color-2;
   border-bottom: 1px solid #ececec;
@@ -141,24 +142,4 @@ header {
 
 .header-contacts {
   color: $color-3;
-}
-
-.menu {
-  margin-left: auto;
-  border: none;
-  color: $color-1;
-  transition: color $animation-duration $animation-type;
-
-  & svg {
-    fill: currentColor;
-  }
-
-  &:hover,
-  &:focus {
-    color: $color-4;
-  }
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
 }

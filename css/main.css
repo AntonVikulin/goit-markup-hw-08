@@ -557,6 +557,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   height: 60px;
   background: #ffffff;
   border-bottom: 1px solid #ececec;
@@ -730,26 +731,138 @@ header {
   color: #757575;
 }
 
-.menu {
+.menu-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   margin-left: auto;
+  padding: 0;
   border: none;
+  color: #212121;
+  background-color: transparent;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.menu-button svg {
+  fill: currentColor;
+}
+
+.menu-button:hover, .menu-button:focus {
+  color: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-container {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 796px;
+    padding: 48px 40px;
+    background-color: #ffffff;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+  }
+  .menu-container.is-open {
+    display: block;
+  }
+}
+
+.menu-nav {
+  font-size: 40px;
+  line-height: 1.18;
+}
+
+.menu-nav li:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.menu-nav a {
   color: #212121;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu svg {
-  fill: currentColor;
-}
-
-.menu:hover, .menu:focus {
+.menu-nav a:hover, .menu-nav a:focus {
   color: #2196f3;
 }
 
-@media screen and (min-width: 768px) {
-  .menu {
-    display: none;
-  }
+.menu-tel {
+  margin-top: 302px;
+  font-size: 34px;
+  line-height: 1.18;
+}
+
+.menu-tel a {
+  color: #2196f3;
+}
+
+.menu-mail {
+  margin-top: 32px;
+  font-size: 24px;
+  line-height: 1.17;
+}
+
+.menu-mail a {
+  color: #afb1b8;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-mail a:hover, .menu-mail a:focus {
+  color: #2196f3;
+}
+
+.menu-sn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 64px;
+  font-size: 18px;
+  line-height: 1.22;
+  margin-left: -10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.menu-sn li {
+  margin-left: 10px;
+}
+
+.menu-sn li:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.menu-sn a {
+  color: #2196f3;
 }
 
 .hero h1 {
@@ -916,14 +1029,17 @@ header {
 .instruments-h3 {
   font-family: Roboto;
   font-weight: bold;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin: auto;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  .instruments-h3 {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1313,6 +1429,12 @@ address {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (max-width: 1199px) {
+  .footer-contacts {
+    display: inline;
+  }
+}
+
 .footer-sn {
   display: block;
 }
@@ -1487,6 +1609,7 @@ section {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: -8px;
   margin-left: auto;
   outline: transparent;
   margin-top: 6px;
@@ -1502,11 +1625,28 @@ section {
             justify-content: center;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    margin-top: 0;
   }
 }
 
-.buttons > li:not(:last-child) {
+.buttons li {
+  margin-top: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .buttons li {
+    margin-top: 0;
+  }
+}
+
+.buttons li:not(:last-child) {
   margin-right: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .buttons li:not(:last-child) {
+    margin-top: 0;
+  }
 }
 
 .buttons-touch {
@@ -1589,7 +1729,7 @@ section {
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .list li {
     margin: 0 30px 30px 0;
   }

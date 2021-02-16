@@ -14,6 +14,7 @@
             <a href="./index.html" class="logo-header">
                 <span class="logo-header__web">Web</span>Studio
             </a>
+    
             <nav class="nav">
                 <ul class="nav-links">
                     <li class="nav-li"><a href="./index.html" class="link nav-item">Студия</a></li>
@@ -21,7 +22,7 @@
                     <li class="nav-li"><a href="#" class="link nav-item">Контакты</a></li>
                 </ul>
             </nav>
-
+    
             <ul class="contacts">
                 <li class="contacts__item">
                     <a href="mailto:info@devstudio.com" class="link header-contacts">
@@ -38,13 +39,42 @@
                         +38 096 111 11 11</a>
                 </li>
             </ul>
-
-            <button class="menu">
+    
+            <div class="menu-container" id="menu-container" data-menu>
+                <ul class="menu-nav">
+                    <li><a href="./index.html" class="">Студия</a></li>
+                    <li><a href="./portfolio.html" class="">Портфолио</a></li>
+                    <li><a href="#" class="">Контакты</a></li>
+                </ul>
+    
+                <ul>
+                    <li class="menu-tel">
+                        <a href="tel:+380961111111">
+                            +38 096 111 11 11</a>
+                    </li>
+                    <li class="menu-mail">
+                        <a href="mailto:info@devstudio.com">
+                            info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="menu-sn">
+                    <li><a href="#" class="">Instagram</a></li>
+                    <li><a href="#" class="">Twitter</a></li>
+                    <li><a href="#" class="">Facebook</a></li>
+                    <li><a href="#" class="">LinkedIn</a></li>
+                </ul>
+            </div>
+    
+            <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
                 <svg width="40" height="40">
-                    <use href="./img/icon.svg#icon-menu"></use>
+                    <use href="./img/icon.svg#icon-menu" class="icon-menu"></use>
+    
+                    <use href="./img/icon.svg#icon-close40px" class="icon-cross"></use>
                 </svg>
             </button>
-
+    
+        </div>
+    
         </div>
     </header>
     

@@ -8,6 +8,7 @@
   transition: color $animation-duration $animation-type;
   z-index: 1;
   cursor: pointer;
+  
 
   & svg {
     fill: currentColor;
